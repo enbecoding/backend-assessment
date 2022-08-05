@@ -1,0 +1,22 @@
+[
+    { 
+      "id": 1, 
+      "name": "Dicky's"
+    },
+    { 
+      "id": 2, 
+      "name": "Wabi House Ramen"
+    },
+    { 
+      "id": 3, 
+      "name": "Sushi Damu"
+    },
+    { 
+      "id": 4, 
+      "name": "Ari Korean BBQ"
+    },
+    { 
+      "id": 5,
+      "name": "Ida Claire"
+    }
+]
