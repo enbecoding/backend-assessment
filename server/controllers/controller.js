@@ -1,6 +1,5 @@
 const { response } = require("express");
 const restaurants = require("../config/db.json")
-console.log(restaurants)
 let base_id = 6
 
 module.exports = {
@@ -39,14 +38,15 @@ module.exports = {
     },
 
     updateRestaurant: (req, res) => {
-       const restaurantname = restaurants.find (  (name_obj) => name_obj.id === parseInt(req.params.name))
-       restaurantname.name = req.body.name
-
+       const restaurant = restaurants.find ( (name_obj) => name_obj.id === parseInt(req.params.id))
+       console.log(restaurant)
+       restaurant.name = req.body.name
+        res.status(200).send(restaurants)
     },
 
     deleteRestaurant: (req, res) => {
-        let index = restaurants.findIndex ( restaurant => restaurant.id === parseInt(req.params.name))
-        restaurants.splice(index -1, 1)
+        const restaurant = restaurants.find ( (name_obj) => name_obj.id === parseInt(req.params.id))
+        restaurants.splice(req.params.id -1, 1)
         res.status(200).send(restaurants)
     }
 
